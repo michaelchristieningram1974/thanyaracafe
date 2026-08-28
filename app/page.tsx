@@ -1,7 +1,6 @@
 import { siteSettings } from "@/lib/content";
 import MenuOrder from "./MenuOrder";
-
-const navLinks = [{ href: "#menu", label: "Menu" }];
+import { ThaiFlag, JapanFlag, UKFlag } from "./Flags";
 
 export default function Home() {
   return (
@@ -10,15 +9,17 @@ export default function Home() {
       <header className="sticky top-0 z-10 border-b border-charcoal/10 bg-cream/90 backdrop-blur">
         <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <span className="font-serif text-lg tracking-wide">{siteSettings.name}</span>
-          <ul className="flex gap-6 text-sm">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className="hover:text-clay transition-colors">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-3">
+            <span className="block h-4 w-6" aria-label="Thai" title="Thai">
+              <ThaiFlag />
+            </span>
+            <span className="block h-4 w-6" aria-label="Japanese" title="Japanese">
+              <JapanFlag />
+            </span>
+            <span className="block h-4 w-6" aria-label="English" title="English">
+              <UKFlag />
+            </span>
+          </div>
         </nav>
       </header>
 
