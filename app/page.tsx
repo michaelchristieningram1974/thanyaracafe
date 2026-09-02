@@ -1,5 +1,4 @@
-import { siteSettings } from "@/lib/content";
-import MenuOrder from "./MenuOrder";
+import { siteSettings, categories, menuItems } from "@/lib/content";
 import { ThaiFlag, JapanFlag, UKFlag } from "./Flags";
 
 export default function Home() {
@@ -13,7 +12,11 @@ export default function Home() {
             <span className="block h-4 w-6" aria-label="Thai" title="Thai">
               <ThaiFlag />
             </span>
-            <span className="block h-4 w-6" aria-label="Japanese" title="Japanese">
+            <span
+              className="block h-4 w-6 border border-charcoal/20"
+              aria-label="Japanese"
+              title="Japanese"
+            >
               <JapanFlag />
             </span>
             <span className="block h-4 w-6" aria-label="English" title="English">
@@ -26,9 +29,10 @@ export default function Home() {
       {/* Hero */}
       <section className="mx-auto flex max-w-5xl flex-col items-start gap-4 px-6 py-24">
         <h1 className="font-serif text-5xl leading-tight">{siteSettings.name}</h1>
+        <p className="max-w-md text-sm text-charcoal/70">{siteSettings.tagline}</p>
       </section>
 
-      {/* Menu + ordering */}
+      {/* Menu */}
       <section id="menu" className="border-t border-charcoal/10">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="font-serif text-3xl">Menu</h2>
@@ -36,8 +40,32 @@ export default function Home() {
             Pick your items and quantities, then send us your order — pay when you
             pick up.
           </p>
-          <div className="mt-10">
-            <MenuOrder />
+          <div className="mt-10 grid gap-12 sm:grid-cols-2">
+            {categories.map((category) => {
+              const items = menuItems.filter((m) => m.category === category);
+              if (items.length === 0) return null;
+              return (
+                <div key={category}>
+                  <h3 className="font-serif text-xl text-clay">{category}</h3>
+                  <ul className="mt-4 space-y-5">
+                    {items.map((item) => (
+                      <li key={item.id} className="flex gap-4">
+                        <div className="aspect-[3/2] w-40 shrink-0 rounded-md bg-sage/25" />
+                        <div className="flex-1">
+                          <div className="flex items-baseline justify-between gap-2">
+                            <span className="font-medium">{item.name}</span>
+                            <span className="text-sm text-charcoal/60">
+                              {item.price} THB
+                            </span>
+                          </div>
+                          <p className="text-sm text-charcoal/70">{item.description}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
