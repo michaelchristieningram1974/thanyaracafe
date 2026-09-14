@@ -1,84 +1,85 @@
-import { siteSettings, categories, menuItems } from "@/lib/content";
+import { siteSettings } from "@/lib/content";
+import MenuOrder from "./MenuOrder";
 import { ThaiFlag, JapanFlag, UKFlag } from "./Flags";
+import { LeafSprig } from "./Leaves";
 
 export default function Home() {
+  const [mainName, ...rest] = siteSettings.name.split(" ");
+  const subName = rest.join(" ");
+
   return (
     <main>
       {/* Nav */}
       <header className="sticky top-0 z-10 border-b border-charcoal/10 bg-cream/90 backdrop-blur">
-        <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-          <span className="font-serif text-base tracking-wide sm:text-lg">
+        <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+          <span className="font-display text-lg uppercase tracking-widest text-forest">
             {siteSettings.name}
           </span>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <span className="block h-3.5 w-5 sm:h-4 sm:w-6" aria-label="Thai" title="Thai">
+          <div className="flex items-center gap-3">
+            <span className="block h-4 w-6" aria-label="Thai" title="Thai">
               <ThaiFlag />
             </span>
             <span
-              className="block h-3.5 w-5 border border-charcoal/20 sm:h-4 sm:w-6"
+              className="block h-4 w-6 border border-charcoal/20"
               aria-label="Japanese"
               title="Japanese"
             >
               <JapanFlag />
             </span>
-            <span className="block h-3.5 w-5 sm:h-4 sm:w-6" aria-label="English" title="English">
+            <span className="block h-4 w-6" aria-label="English" title="English">
               <UKFlag />
             </span>
           </div>
         </nav>
       </header>
 
-      {/* Hero */}
-      <section className="mx-auto flex max-w-5xl flex-col items-start gap-3 px-4 py-12 sm:gap-4 sm:px-6 sm:py-24">
-        <h1 className="font-serif text-3xl leading-tight sm:text-5xl">
-          {siteSettings.name}
+      {/* Hero / wordmark */}
+      <section className="relative mx-auto max-w-5xl overflow-hidden px-6 py-20 text-center">
+        <LeafSprig className="pointer-events-none absolute left-2 top-2 h-20 w-20 -scale-x-100 text-forest/60 sm:left-6 sm:top-4 sm:h-28 sm:w-28" />
+        <LeafSprig className="pointer-events-none absolute bottom-2 right-2 h-20 w-20 rotate-180 text-forest/60 sm:bottom-4 sm:right-6 sm:h-28 sm:w-28" />
+
+        <span className="font-script mb-3 block text-xl text-forest/70 sm:absolute sm:right-10 sm:top-6 sm:mb-0 sm:text-2xl">
+          Good Food, Good Mood
+        </span>
+
+        <h1 className="font-display text-5xl uppercase tracking-[0.15em] text-forest sm:text-6xl">
+          {mainName}
         </h1>
-        <p className="max-w-md text-sm text-charcoal/70">{siteSettings.tagline}</p>
+        {subName && (
+          <p className="font-display mt-1 text-2xl italic text-forest/80 sm:text-3xl">
+            {subName.toLowerCase()}
+          </p>
+        )}
+        <p className="mt-3 text-sm tracking-wide text-charcoal/50">
+          ({siteSettings.nameThai})
+        </p>
       </section>
 
-      {/* Menu */}
+      {/* Menu + ordering */}
       <section id="menu" className="border-t border-charcoal/10">
-        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl">Menu</h2>
-          <p className="mt-2 max-w-xl text-sm text-charcoal/60">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
+            Menu
+          </h2>
+          <span className="mt-2 block h-px w-16 bg-forest/40" />
+          <p className="mt-4 max-w-xl text-sm text-charcoal/60">
             Pick your items and quantities, then send us your order — pay when you
             pick up.
           </p>
-          <div className="mt-8 grid gap-10 sm:mt-10 sm:grid-cols-2 sm:gap-12">
-            {categories.map((category) => {
-              const items = menuItems.filter((m) => m.category === category);
-              if (items.length === 0) return null;
-              return (
-                <div key={category}>
-                  <h3 className="font-serif text-lg text-clay sm:text-xl">{category}</h3>
-                  <ul className="mt-3 space-y-4 sm:mt-4 sm:space-y-5">
-                    {items.map((item) => (
-                      <li key={item.id} className="flex gap-3 sm:gap-4">
-                        <div className="aspect-[3/2] w-24 shrink-0 rounded-md bg-sage/25 sm:w-40" />
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-baseline justify-between gap-2">
-                            <span className="font-medium">{item.name}</span>
-                            <span className="whitespace-nowrap text-sm text-charcoal/60">
-                              {item.price} THB
-                            </span>
-                          </div>
-                          <p className="text-sm text-charcoal/70">{item.description}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
+          <div className="mt-10">
+            <MenuOrder />
           </div>
         </div>
       </section>
 
       {/* Hours / Location */}
       <section id="visit" className="border-t border-charcoal/10 bg-white">
-        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl">Visit</h2>
-          <div className="mt-6 grid gap-8 sm:mt-8 sm:grid-cols-2 sm:gap-10">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
+            Visit
+          </h2>
+          <span className="mt-2 block h-px w-16 bg-forest/40" />
+          <div className="mt-8 grid gap-10 sm:grid-cols-2">
             <div>
               <h3 className="text-sm font-medium uppercase tracking-wide text-charcoal/50">
                 Hours
@@ -107,15 +108,23 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact" className="border-t border-charcoal/10">
-        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-20">
-          <h2 className="font-serif text-2xl sm:text-3xl">Contact</h2>
-          <p className="mt-3 break-words text-sm text-charcoal/80">{siteSettings.email}</p>
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
+            Contact
+          </h2>
+          <span className="mt-2 block h-px w-16 bg-forest/40" />
+          <p className="mt-4 text-sm text-charcoal/80">{siteSettings.email}</p>
           <p className="mt-1 text-sm text-charcoal/60">{siteSettings.phone}</p>
         </div>
       </section>
 
-      <footer className="border-t border-charcoal/10 px-4 py-8 text-center text-xs text-charcoal/50 sm:px-6">
-        © {new Date().getFullYear()} {siteSettings.name}. All rights reserved.
+      <footer className="border-t border-charcoal/10 px-6 py-10 text-center">
+        <p className="text-xs uppercase tracking-[0.2em] text-forest/70">
+          Thai Food · Fresh Ingredients · Homemade Style
+        </p>
+        <p className="mt-4 text-xs text-charcoal/50">
+          © {new Date().getFullYear()} {siteSettings.name}. All rights reserved.
+        </p>
       </footer>
     </main>
   );

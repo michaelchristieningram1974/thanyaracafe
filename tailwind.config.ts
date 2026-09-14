@@ -7,8 +7,10 @@ const config: Config = {
       colors: {
         cream: "#faf6ee",
         charcoal: "#2b2622",
+        forest: "#3f4b34",
+        sage: "#7c8c66",
+        tan: "#dcc9a3",
         clay: "#b5502f",
-        sage: "#5c6b4f",
       },
       fontFamily: {
         sans: [
@@ -21,6 +23,8 @@ const config: Config = {
           "sans-serif",
         ],
         serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        display: ["'Playfair Display'", "Georgia", "serif"],
+        script: ["'Caveat'", "cursive"],
       },
     },
   },
