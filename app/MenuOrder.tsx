@@ -96,7 +96,7 @@ export default function MenuOrder() {
                   return (
                     <li key={item.id} className="flex gap-4">
                       {item.image ? (
-                        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-1 ring-charcoal/10">
+                        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg ring-1 ring-charcoal/10">
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -107,7 +107,7 @@ export default function MenuOrder() {
                         </div>
                       ) : (
                         <div
-                          className={`h-20 w-20 shrink-0 rounded-full ring-1 ring-charcoal/10 ${placeholderColor}`}
+                          className={`h-20 w-20 shrink-0 rounded-lg ring-1 ring-charcoal/10 ${placeholderColor}`}
                         />
                       )}
                       <div className="flex-1">
@@ -116,7 +116,7 @@ export default function MenuOrder() {
                         </p>
                         <p className="text-sm text-charcoal/60">{item.name}</p>
                         <div className="mt-1 flex justify-end">
-                          <span className="whitespace-nowrap rounded-full border border-charcoal/20 px-3 py-0.5 text-sm text-charcoal/70">
+                          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-charcoal/20 text-xs text-charcoal/70">
                             {item.price}฿
                           </span>
                         </div>
