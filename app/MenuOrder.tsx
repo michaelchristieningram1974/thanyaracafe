@@ -113,16 +113,15 @@ export default function MenuOrder() {
                       <div className="flex-1">
                         <div className="flex items-baseline justify-between gap-2">
                           <div>
-                            <p className="font-display text-base text-forest">
+                            <p className="font-display text-xl text-forest">
                               {item.nameThai}
                             </p>
-                            <p className="text-xs text-charcoal/60">{item.name}</p>
+                            <p className="text-sm text-charcoal/60">{item.name}</p>
                           </div>
                           <span className="whitespace-nowrap text-sm text-charcoal/70">
                             {item.price}฿
                           </span>
                         </div>
-                        <p className="mt-1 text-sm text-charcoal/70">{item.description}</p>
                         <div className="mt-2 flex items-center gap-3">
                           <button
                             type="button"
