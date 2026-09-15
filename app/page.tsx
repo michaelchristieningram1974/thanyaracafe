@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* Menu + ordering */}
       <section id="menu" className="border-t border-charcoal/10">
-        <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mx-auto max-w-5xl px-6 pb-20 pt-8">
           <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
             Menu
           </h2>

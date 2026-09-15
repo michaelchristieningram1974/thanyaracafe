@@ -111,14 +111,12 @@ export default function MenuOrder() {
                         />
                       )}
                       <div className="flex-1">
-                        <div className="flex items-baseline justify-between gap-2">
-                          <div>
-                            <p className="font-display text-xl text-forest">
-                              {item.nameThai}
-                            </p>
-                            <p className="text-sm text-charcoal/60">{item.name}</p>
-                          </div>
-                          <span className="whitespace-nowrap text-sm text-charcoal/70">
+                        <p className="font-display text-xl text-forest">
+                          {item.nameThai}
+                        </p>
+                        <p className="text-sm text-charcoal/60">{item.name}</p>
+                        <div className="mt-1 flex justify-end">
+                          <span className="whitespace-nowrap rounded-full border border-charcoal/20 px-3 py-0.5 text-sm text-charcoal/70">
                             {item.price}฿
                           </span>
                         </div>
