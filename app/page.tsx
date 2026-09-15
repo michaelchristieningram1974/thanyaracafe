@@ -1,7 +1,6 @@
 import { siteSettings } from "@/lib/content";
 import MenuOrder from "./MenuOrder";
 import { ThaiFlag, JapanFlag, UKFlag } from "./Flags";
-import { LeafSprig } from "./Leaves";
 
 export default function Home() {
   const [mainName, ...rest] = siteSettings.name.split(" ");
@@ -35,13 +34,6 @@ export default function Home() {
 
       {/* Hero / wordmark */}
       <section className="relative mx-auto max-w-5xl overflow-hidden px-6 py-20 text-center">
-        <LeafSprig className="pointer-events-none absolute left-2 top-2 h-20 w-20 -scale-x-100 text-forest/60 sm:left-6 sm:top-4 sm:h-28 sm:w-28" />
-        <LeafSprig className="pointer-events-none absolute bottom-2 right-2 h-20 w-20 rotate-180 text-forest/60 sm:bottom-4 sm:right-6 sm:h-28 sm:w-28" />
-
-        <span className="font-script mb-3 block text-xl text-forest/70 sm:absolute sm:right-10 sm:top-6 sm:mb-0 sm:text-2xl">
-          Good Food, Good Mood
-        </span>
-
         <h1 className="font-display text-5xl uppercase tracking-[0.15em] text-forest sm:text-6xl">
           {mainName}
         </h1>
@@ -50,9 +42,6 @@ export default function Home() {
             {subName.toLowerCase()}
           </p>
         )}
-        <p className="mt-3 text-sm tracking-wide text-charcoal/50">
-          ({siteSettings.nameThai})
-        </p>
       </section>
 
       {/* Menu + ordering */}
