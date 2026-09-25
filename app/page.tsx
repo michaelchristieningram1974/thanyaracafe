@@ -33,7 +33,7 @@ export default function Home() {
       </header>
 
       {/* Hero / wordmark */}
-      <section className="relative mx-auto max-w-5xl overflow-hidden px-6 py-20 text-center">
+      <section className="relative mx-auto max-w-5xl overflow-hidden px-6 py-16 text-center">
         <h1 className="font-display text-5xl uppercase tracking-[0.15em] text-forest sm:text-6xl">
           {mainName}
         </h1>
