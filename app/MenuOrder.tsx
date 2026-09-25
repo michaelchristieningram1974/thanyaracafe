@@ -100,7 +100,7 @@ export default function MenuOrder() {
                       )}
                       <div className="flex gap-4 pb-5">
                       {item.image ? (
-                        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg ring-1 ring-charcoal/10">
+                        <div className="relative h-20 w-20 shrink-0 overflow-hidden ring-1 ring-charcoal/10">
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -111,7 +111,7 @@ export default function MenuOrder() {
                         </div>
                       ) : (
                         <div
-                          className={`h-20 w-20 shrink-0 rounded-lg ring-1 ring-charcoal/10 ${placeholderColor}`}
+                          className={`h-20 w-20 shrink-0 ring-1 ring-charcoal/10 ${placeholderColor}`}
                         />
                       )}
                       <div className="flex-1">
