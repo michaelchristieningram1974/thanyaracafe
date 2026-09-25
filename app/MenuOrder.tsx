@@ -88,13 +88,17 @@ export default function MenuOrder() {
                 </h3>
                 <span className="h-px flex-1 bg-charcoal/15" />
               </div>
-              <ul className="mt-5 space-y-5">
+              <ul className="mt-5">
                 {items.map((item, itemIndex) => {
                   const qty = cart[item.id] ?? 0;
                   const placeholderColor =
                     itemIndex % 2 === 0 ? "bg-sage/25" : "bg-tan/40";
                   return (
-                    <li key={item.id} className="flex gap-4">
+                    <li key={item.id}>
+                      {itemIndex > 0 && (
+                        <div className="mx-auto mb-5 h-px w-3/5 bg-charcoal/10" />
+                      )}
+                      <div className="flex gap-4 pb-5">
                       {item.image ? (
                         <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg ring-1 ring-charcoal/10">
                           <Image
@@ -140,6 +144,7 @@ export default function MenuOrder() {
                             +
                           </button>
                         </div>
+                      </div>
                       </div>
                     </li>
                   );
