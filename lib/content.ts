@@ -67,6 +67,7 @@ export const menuItems: MenuItem[] = [
   // Spicy Salads (ยำ)
   {
     id: "yum-woon-sen-moo",
+    image: "/menu/yum-woon-sen-moo.jpg",
     name: "Spicy Glass Noodle Salad with Minced Pork",
     nameThai: "ยำวุ้นเส้นหมูสับ",
     description: "Glass noodles tossed with minced pork, chili, and lime in a spicy dressing.",
@@ -75,6 +76,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "yum-woon-sen-talay",
+    image: "/menu/yum-woon-sen-talay.jpg",
     name: "Spicy Glass Noodle Salad with Mixed Seafood",
     nameThai: "ยำวุ้นเส้นรวมมิตรทะเล",
     description: "Glass noodles tossed with shrimp, squid, and mussels in a spicy lime dressing.",
@@ -83,6 +85,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "yum-ruammit",
+    image: "/menu/yum-ruammit.jpg",
     name: "Mixed Seafood Salad",
     nameThai: "ยำรวมมิตร",
     description: "Shrimp, squid, and herbs tossed in a spicy Thai seafood salad dressing.",
@@ -92,6 +95,7 @@ export const menuItems: MenuItem[] = [
   // Papaya Salads (ตำ)
   {
     id: "tam-thai",
+    image: "/menu/tam-thai.jpg",
     name: "Thai Papaya Salad",
     nameThai: "ตำไทย",
     description: "Shredded green papaya pounded with tomato, long bean, dried shrimp, and peanuts.",
@@ -100,6 +104,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "tam-lao",
+    image: "/menu/tam-lao.jpg",
     name: "Laos Papaya Salad",
     nameThai: "ตำลาว",
     description: "A saltier, more pungent style of papaya salad made with fermented fish sauce.",
@@ -108,6 +113,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "tam-poo-pla-ra",
+    image: "/menu/tam-poo-pla-ra.jpg",
     name: "Papaya Salad with Salted Crab",
     nameThai: "ตำปูปลาร้า",
     description: "Papaya salad with salted crab and fermented fish sauce for a bold, savory kick.",
@@ -117,6 +123,7 @@ export const menuItems: MenuItem[] = [
   // Fried Items (ทอด)
   {
     id: "french-fries",
+    image: "/menu/french-fries.jpg",
     name: "French Fries",
     nameThai: "เฟรนฟราย",
     description: "Crispy golden fries served with ketchup.",
@@ -125,6 +132,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "chicken-nuggets",
+    image: "/menu/chicken-nuggets.jpg",
     name: "Chicken Nuggets",
     nameThai: "นักเก็ตไก่",
     description: "Breaded chicken nuggets served with ketchup.",
@@ -133,6 +141,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "fried-chicken-cartilage",
+    image: "/menu/fried-chicken-cartilage.jpg",
     name: "Fried Chicken Cartilage",
     nameThai: "เอ็นไก่ทอด",
     description: "Crunchy deep-fried chicken cartilage, a popular Thai snack.",
@@ -142,6 +151,7 @@ export const menuItems: MenuItem[] = [
   // Single Dishes (จาน)
   {
     id: "kra-pao-moo-gai",
+    image: "/menu/kra-pao-moo-gai.jpg",
     name: "Basil Pork / Chicken",
     nameThai: "กะเพราหมู,ไก่",
     description: "Stir-fried minced pork or chicken with holy basil and chili, topped with a fried egg, served over rice.",
@@ -150,6 +160,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "kra-pao-talay",
+    image: "/menu/kra-pao-talay.jpg",
     name: "Basil Seafood / Squid / Shrimp",
     nameThai: "กะเพราทะเล,ปลาหมึก,กุ้ง",
     description: "Stir-fried mixed seafood with holy basil and chili, topped with a fried egg, served over rice.",
@@ -158,6 +169,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "pad-cha-moo-gai",
+    image: "/menu/pad-cha-moo-gai.jpg",
     name: "Spicy Herb Stir-Fry Pork / Chicken",
     nameThai: "ผัดฉ่าหมู,ไก่",
     description: "Pork or chicken stir-fried with Thai herbs and spices, served over rice.",
@@ -167,6 +179,7 @@ export const menuItems: MenuItem[] = [
   // Stir-Fried Dishes (ผัด)
   {
     id: "pad-pak-boong",
+    image: "/menu/pad-pak-boong.jpg",
     name: "Stir-Fried Morning Glory with Oyster Sauce",
     nameThai: "ผักบุ้งไฟแดง",
     description: "Morning glory quickly stir-fried with garlic, chili, and oyster sauce.",
@@ -175,6 +188,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "pad-pong-kari-moo-gai",
+    image: "/menu/pad-pong-kari-moo-gai.jpg",
     name: "Stir-Fried Pork or Chicken with Yellow Curry",
     nameThai: "ผัดผงกะหรี่หมู,ไก่",
     description: "Pork or chicken stir-fried with egg and yellow curry powder.",
@@ -183,6 +197,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "pad-pong-kari-talay",
+    image: "/menu/pad-pong-kari-talay.jpg",
     name: "Stir-Fried Seafood with Yellow Curry",
     nameThai: "ผัดผงกะหรี่ทะเล,ปลาหมึก,กุ้ง",
     description: "Mixed seafood stir-fried with egg and yellow curry powder.",
@@ -192,6 +207,7 @@ export const menuItems: MenuItem[] = [
   // Soup Dishes (ต้ม)
   {
     id: "tom-yum-moo-gai-pla",
+    image: "/menu/tom-yum-moo-gai-pla.jpg",
     name: "Tom Yum (Creamy/Clear) Pork, Chicken or Fish",
     nameThai: "ต้มยำน้ำข้น,น้ำใส หมู,ไก่,ปลา",
     description: "Hot and sour soup with pork, chicken, or fish, in a creamy or clear broth.",
@@ -200,6 +216,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "tom-yum-talay",
+    image: "/menu/tom-yum-talay.jpg",
     name: "Tom Yum (Creamy/Clear) Seafood, Squid, Shrimp",
     nameThai: "ต้มยำน้ำข้น,น้ำใส ทะเล,ปลาหมึก,กุ้ง",
     description: "Hot and sour soup with mixed seafood, in a creamy or clear broth.",
@@ -209,6 +226,7 @@ export const menuItems: MenuItem[] = [
   // Grilled Dishes (ย่าง)
   {
     id: "kho-moo-yang",
+    image: "/menu/kho-moo-yang.jpg",
     name: "Grilled Pork Neck",
     nameThai: "คอหมูย่าง",
     description: "Grilled marinated pork neck, sliced and served with a spicy dipping sauce.",
