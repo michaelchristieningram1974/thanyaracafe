@@ -120,7 +120,7 @@ export default function MenuOrder() {
                         </p>
                         <p className="text-sm text-charcoal/60">{item.name}</p>
                         <div className="mt-1 flex justify-end">
-                          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-charcoal/20 text-xs text-charcoal/70">
+                          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-charcoal/20 bg-forest/10 text-xs text-charcoal/70">
                             {item.price}฿
                           </span>
                         </div>

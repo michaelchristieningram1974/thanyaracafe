@@ -3,9 +3,6 @@ import MenuOrder from "./MenuOrder";
 import { ThaiFlag, JapanFlag, UKFlag } from "./Flags";
 
 export default function Home() {
-  const [mainName, ...rest] = siteSettings.name.split(" ");
-  const subName = rest.join(" ");
-
   return (
     <main>
       {/* Nav */}
@@ -34,14 +31,12 @@ export default function Home() {
 
       {/* Hero / wordmark */}
       <section className="relative mx-auto max-w-5xl overflow-hidden px-6 py-16 text-center">
-        <h1 className="font-display text-5xl uppercase tracking-[0.15em] text-forest sm:text-6xl">
-          {mainName}
+        <h1 className="font-script text-6xl leading-tight text-forest sm:text-7xl">
+          good food
         </h1>
-        {subName && (
-          <p className="font-display mt-1 text-2xl italic text-forest/80 sm:text-3xl">
-            {subName.toLowerCase()}
-          </p>
-        )}
+        <p className="font-script mt-1 text-6xl leading-tight text-forest sm:text-7xl">
+          good mood
+        </p>
       </section>
 
       {/* Menu + ordering */}
