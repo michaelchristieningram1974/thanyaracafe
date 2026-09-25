@@ -51,9 +51,8 @@ export default function Home() {
             Menu
           </h2>
           <span className="mt-2 block h-px w-16 bg-forest/40" />
-          <p className="mt-4 max-w-xl text-sm text-charcoal/60">
-            Pick your items and quantities, then send us your order — pay when you
-            pick up.
+          <p className="mt-4 max-w-xl text-lg text-charcoal/60">
+            Pay via QR or in cash on delivery
           </p>
           <div className="mt-10">
             <MenuOrder />
