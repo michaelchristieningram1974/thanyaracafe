@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* Hero / wordmark */}
       <section className="relative isolate flex min-h-[420px] items-center justify-center overflow-hidden px-6 text-center sm:min-h-[520px]">
-        <div className="absolute inset-0 -z-20 bg-[url('/menu/tam-thai.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 -z-20 bg-[url('/hero-som-tam.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest/95 via-forest/50 to-forest/0" />
         <h1 className="font-display text-6xl leading-tight text-cream sm:text-7xl">
           {siteSettings.name}
