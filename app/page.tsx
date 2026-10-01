@@ -7,10 +7,7 @@ export default function Home() {
     <main>
       {/* Nav */}
       <header className="sticky top-0 z-10 border-b border-charcoal/10 bg-cream/90 backdrop-blur">
-        <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <span className="font-display text-lg uppercase tracking-widest text-forest">
-            {siteSettings.name}
-          </span>
+        <nav className="mx-auto flex max-w-5xl items-center justify-end px-6 py-4">
           <div className="flex items-center gap-3">
             <span className="block h-4 w-6" aria-label="Thai" title="Thai">
               <ThaiFlag />
@@ -32,11 +29,8 @@ export default function Home() {
       {/* Hero / wordmark */}
       <section className="relative mx-auto max-w-5xl overflow-hidden px-6 py-16 text-center">
         <h1 className="font-script text-6xl leading-tight text-forest sm:text-7xl">
-          good food
+          {siteSettings.name}
         </h1>
-        <p className="font-script mt-1 text-6xl leading-tight text-forest sm:text-7xl">
-          good mood
-        </p>
       </section>
 
       {/* Menu + ordering */}
