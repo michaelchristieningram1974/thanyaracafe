@@ -59,7 +59,7 @@ export default function Home() {
       <section id="visit" className="border-t border-charcoal/10 bg-white">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
-            Visit
+            For Pick Up
           </h2>
           <span className="mt-2 block h-px w-16 bg-forest/40" />
           <div className="mt-8 grid gap-10 sm:grid-cols-2">
@@ -83,7 +83,14 @@ export default function Home() {
                 Address
               </h3>
               <p className="mt-3 text-sm text-charcoal/80">{siteSettings.address}</p>
-              <div className="mt-4 aspect-video w-full rounded-md bg-charcoal/5" />
+              <div className="mt-4 aspect-video w-full overflow-hidden rounded-md bg-charcoal/5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://staticmap.openstreetmap.de/staticmap.php?center=13.1717,100.9330&zoom=15&size=640x360&markers=13.1717,100.9330,red-pushpin"
+                  alt="Map showing Thanyara Cafe near central Si Racha"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

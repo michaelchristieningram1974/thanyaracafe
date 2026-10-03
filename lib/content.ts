@@ -33,7 +33,7 @@ export const siteSettings: SiteSettings = {
   aboutTitle: "Our Story",
   aboutText:
     "Thanyara Cafe serves classic Thai dishes made fresh daily with local ingredients, in a relaxed neighborhood setting.",
-  address: "TBC",
+  address: "Central Si Racha, Chonburi 20110, Thailand (exact address coming soon)",
   phone: "TBC",
   email: "orders@thanyaracafe.com",
   hours: [
