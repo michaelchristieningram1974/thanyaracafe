@@ -30,7 +30,7 @@ export default function Home() {
       <section className="relative isolate flex min-h-[220px] items-center justify-center overflow-hidden px-6 text-center sm:min-h-[280px]">
         <div className="absolute inset-0 -z-20 bg-[url('/hero-som-tam.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest/95 via-forest/50 to-forest/0" />
-        <h1 className="font-display text-6xl leading-tight text-cream sm:text-7xl">
+        <h1 className="font-display text-6xl leading-tight text-cream drop-shadow-[0_4px_12px_rgba(0,0,0,0.55)] sm:text-7xl">
           {siteSettings.name}
         </h1>
       </section>
