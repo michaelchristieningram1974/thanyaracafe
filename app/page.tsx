@@ -42,7 +42,7 @@ export default function Home() {
             <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
               Menu
             </h2>
-            <span className="-rotate-3 shrink-0 rounded-sm bg-tan px-3 py-2 text-center text-xs font-medium uppercase leading-tight tracking-wide text-charcoal shadow-sm">
+            <span className="font-script -rotate-3 shrink-0 rounded-md bg-tan px-3 py-2 text-center text-lg font-bold leading-tight text-charcoal shadow-sm">
               Pay on delivery
               <br />
               via QR / cash
