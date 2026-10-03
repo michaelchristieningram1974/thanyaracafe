@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { siteSettings } from "@/lib/content";
 import MenuOrder from "./MenuOrder";
 import { ThaiFlag, JapanFlag, UKFlag } from "./Flags";
@@ -84,13 +83,12 @@ export default function Home() {
                 Address
               </h3>
               <p className="mt-3 text-sm text-charcoal/80">{siteSettings.address}</p>
-              <div className="relative mt-4 aspect-video w-full overflow-hidden rounded-md bg-charcoal/5">
-                <Image
-                  src="/map-si-racha.jpg"
-                  alt="Map showing Thanyara Cafe near central Si Racha"
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
+              <div className="mt-4 aspect-video w-full overflow-hidden rounded-md bg-charcoal/5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/map-placeholder.jpg"
+                  alt="Map placeholder"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
