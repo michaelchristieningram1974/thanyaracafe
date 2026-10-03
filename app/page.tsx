@@ -38,13 +38,15 @@ export default function Home() {
       {/* Menu + ordering */}
       <section id="menu" className="border-t border-charcoal/10">
         <div className="mx-auto max-w-5xl px-6 pb-20 pt-8">
-          <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
-            Menu
-          </h2>
+          <div className="flex flex-wrap items-center gap-4">
+            <h2 className="font-display text-3xl uppercase tracking-wide text-forest">
+              Menu
+            </h2>
+            <span className="-rotate-3 whitespace-nowrap rounded-sm bg-tan px-3 py-1 text-xs font-medium uppercase tracking-wide text-charcoal shadow-sm">
+              Pay on delivery via QR / cash
+            </span>
+          </div>
           <span className="mt-2 block h-px w-16 bg-forest/40" />
-          <p className="mt-4 max-w-xl text-lg text-charcoal/60">
-            Pay via QR or in cash on delivery
-          </p>
           <div className="mt-10">
             <MenuOrder />
           </div>
