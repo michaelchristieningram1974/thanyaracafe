@@ -8,18 +8,18 @@ export default function Home() {
       {/* Nav */}
       <header className="sticky top-0 z-10 border-b border-charcoal/10 bg-cream/90 backdrop-blur">
         <nav className="mx-auto flex max-w-5xl items-center justify-end px-6 py-4">
-          <div className="flex items-center gap-3">
-            <span className="block h-4 w-6" aria-label="Thai" title="Thai">
+          <div className="flex items-center gap-2">
+            <span className="block h-3 w-4" aria-label="Thai" title="Thai">
               <ThaiFlag />
             </span>
             <span
-              className="block h-4 w-6 border border-charcoal/20"
+              className="block h-3 w-4 border border-charcoal/20"
               aria-label="Japanese"
               title="Japanese"
             >
               <JapanFlag />
             </span>
-            <span className="block h-4 w-6" aria-label="English" title="English">
+            <span className="block h-3 w-4" aria-label="English" title="English">
               <UKFlag />
             </span>
           </div>
